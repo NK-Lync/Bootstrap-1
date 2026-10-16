@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Thiết kế trang web với Bootstrap Grid System</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- CSS tùy chỉnh -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. Header -->
+    <header class="site-header text-white text-center py-4">
+        <div class="container">
+            <h1 class="fw-bold mb-2">MyWebsite</h1>
+            <p class="mb-0">
+                Khám phá kiến thức và công nghệ mỗi ngày
+            </p>
+        </div>
+    </header>
+
+    <!-- 2. Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">MyWebsite</a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Mở menu điều hướng"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Trang chủ</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#content">Bài viết</a>
+                    </li>
+
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            id="servicesDropdown"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            Danh mục
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li>
+                                <a class="dropdown-item" href="#technology">
+                                    Công nghệ
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#programming">
+                                    Lập trình
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#news">
+                                    Tin tức
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Liên hệ</a>
+                    </li>
+                </ul>
+
+                <form class="d-flex" role="search" action="#content">
+                    <input
+                        class="form-control me-2"
+                        type="search"
+                        placeholder="Tìm kiếm..."
+                        aria-label="Tìm kiếm"
+                    >
+                    <button class="btn btn-outline-light" type="submit">
+                        Tìm
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 3. Main Content và Sidebar -->
+    <main id="home" class="container my-5">
+        <div class="row g-4">
+
+            <!-- Main Content: 8/12 cột trên màn hình từ lg -->
+            <section id="content" class="col-12 col-lg-8">
+                <div class="content-panel p-4">
+                    <h2 class="fw-bold mb-3">Nội dung chính</h2>
+
+                    <p class="text-muted">
+                        Chào mừng bạn đến với MyWebsite. Đây là khu vực
+                        hiển thị nội dung chính của trang web, được xây dựng
+                        bằng Bootstrap Grid System.
+                    </p>
+
+                    <!-- Bài viết 1 -->
+                    <article id="technology" class="article-card p-3 mb-3">
+                        <span class="badge text-bg-primary mb-2">
+                            Công nghệ
+                        </span>
+
+                        <h3 class="h4 fw-bold">
+                            Tìm hiểu về công nghệ hiện đại
+                        </h3>
+
+                        <p>
+                            Công nghệ giúp cải thiện hiệu quả công việc,
+                            kết nối con người và mở ra nhiều cơ hội phát triển
+                            trong thời đại số.
+                        </p>
+
+                        <a href="#contact" class="btn btn-primary btn-sm">
+                            Đọc thêm
+                        </a>
+                    </article>
+
+                    <!-- Bài viết 2 -->
+                    <article id="programming" class="article-card p-3 mb-3">
+                        <span class="badge text-bg-success mb-2">
+                            Lập trình
+                        </span>
+
+                        <h3 class="h4 fw-bold">
+                            Bắt đầu học lập trình web
+                        </h3>
+
+                        <p>
+                            HTML xây dựng cấu trúc, CSS tạo kiểu giao diện
+                            và Bootstrap hỗ trợ tạo bố cục responsive
+                            nhanh chóng.
+                        </p>
+
+                        <a href="#contact" class="btn btn-primary btn-sm">
+                            Đọc thêm
+                        </a>
+                    </article>
+
+                    <!-- Bài viết 3 -->
+                    <article id="news" class="article-card p-3">
+                        <span class="badge text-bg-warning mb-2">
+                            Tin tức
+                        </span>
+
+                        <h3 class="h4 fw-bold">
+                            Cập nhật kiến thức mỗi ngày
+                        </h3>
+
+                        <p>
+                            Thường xuyên tìm hiểu các kiến thức mới sẽ giúp
+                            bạn nâng cao kỹ năng và chủ động hơn trong học tập.
+                        </p>
+
+                        <a href="#contact" class="btn btn-primary btn-sm">
+                            Đọc thêm
+                        </a>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Sidebar: 4/12 cột trên màn hình từ lg -->
+            <aside class="col-12 col-lg-4">
+                <div class="sidebar-panel p-4">
+                    <h2 class="h4 fw-bold mb-4">Thông tin bên lề</h2>
+
+                    <div class="sidebar-item mb-4">
+                        <h3 class="h6 fw-bold">Giới thiệu</h3>
+                        <p class="text-muted mb-0">
+                            MyWebsite chia sẻ kiến thức công nghệ,
+                            lập trình và học tập.
+                        </p>
+                    </div>
+
+                    <div class="sidebar-item mb-4">
+                        <h3 class="h6 fw-bold">Danh mục phổ biến</h3>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <a href="#technology">Công nghệ</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#programming">Lập trình</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#news">Tin tức</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-item">
+                        <h3 class="h6 fw-bold">Thông báo</h3>
+                        <p class="text-muted mb-0">
+                            Hãy quay lại thường xuyên để cập nhật
+                            những nội dung mới.
+                        </p>
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- 4. Footer -->
+    <footer id="contact" class="site-footer bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-1">
+                &copy; 2026 MyWebsite. All rights reserved.
+            </p>
+
+            <p class="text-secondary small mb-0">
+                Được xây dựng với Bootstrap Grid System
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript: Navbar và Dropdown -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+    </script>
+</body>
+</html>

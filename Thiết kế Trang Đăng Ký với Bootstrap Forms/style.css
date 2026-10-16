@@ -1,0 +1,90 @@
+
+/* Cài đặt chung */
+body {
+    font-family: Arial, sans-serif;
+    color: #212529;
+    background-color: #f1f5f9;
+    line-height: 1.6;
+}
+
+/* Căn giữa form */
+.registration-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 40px 0;
+}
+
+/* Khung đăng ký */
+.registration-card {
+    padding: 35px;
+    background-color: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* Biểu tượng */
+.registration-icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 18px;
+    font-size: 32px;
+    background-color: #e7f1ff;
+    border-radius: 50%;
+}
+
+/* Nhãn */
+.form-label,
+fieldset legend {
+    font-weight: 600;
+}
+
+/* Ô nhập liệu */
+.form-control,
+.form-select {
+    min-height: 46px;
+    border-radius: 8px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.15);
+}
+
+/* Radio và checkbox */
+.form-check-input {
+    cursor: pointer;
+}
+
+.form-check-label {
+    cursor: pointer;
+}
+
+/* Nút đăng ký */
+.btn-primary {
+    min-height: 48px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+/* Thông báo xác nhận mật khẩu */
+#passwordFeedback {
+    min-height: 20px;
+}
+
+/* Responsive trên điện thoại */
+@media (max-width: 576px) {
+    .registration-page {
+        padding: 20px 0;
+    }
+
+    .registration-card {
+        padding: 24px 18px;
+        border-radius: 14px;
+    }
+}

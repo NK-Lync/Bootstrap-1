@@ -1,0 +1,88 @@
+
+/* Cài đặt chung */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+/* Thanh điều hướng */
+.navbar {
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    letter-spacing: 0.5px;
+}
+
+.navbar .nav-link {
+    margin-left: 8px;
+    transition: color 0.2s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #8ec5ff;
+}
+
+/* Khu vực giới thiệu */
+.hero {
+    padding: 100px 20px;
+    color: white;
+    background: linear-gradient(135deg, #0d6efd, #263746);
+}
+
+.hero h1 {
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: 0 auto 25px;
+}
+
+/* Các thẻ nội dung */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-title {
+    color: #0d6efd;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+}
+
+/* Hiển thị trên thiết bị di động */
+@media (max-width: 991.98px) {
+    .navbar .nav-link {
+        margin-left: 0;
+        padding: 10px 0;
+    }
+
+    .navbar-nav {
+        padding-top: 10px;
+    }
+
+    .hero {
+        padding: 70px 15px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
